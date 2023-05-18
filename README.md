@@ -1,8 +1,12 @@
 ## SOLID principles with examples
 <h3>1 - Single Responsibility </h3> 
 <p>A class should do one thing and therefore it should have only a single reason to change </p>
+<p>look at the storing user example</p>
 <a href="https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php">
-look at the storing user example
+No Solid
+</a>
+<a href="https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php">
+Applying Solid
 </a>
 
 
