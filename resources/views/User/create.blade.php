@@ -14,17 +14,32 @@
                     @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter name">
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter name">
                       </div>
+                      @error('name')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                      @enderror
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
+                    @error('email')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
+                    @error('password')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     <button type="submit" class="btn btn-primary btn-block">Submit</button>
                   </form>
             </div>

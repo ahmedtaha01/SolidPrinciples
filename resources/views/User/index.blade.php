@@ -13,12 +13,14 @@
                     <a href="{{ route('user.create') }}" class="btn btn-success m-4">Add User</a>
                 </div>
     
-                <table class="table">
+                <table class="table text-center">
                     <thead>
                       <tr>
                         <th scope="col">id</th>
                         <th scope="col">name</th>
                         <th scope="col">email</th>
+                        <th scope="col">channels</th>
+                        <th scope="col">subscribers</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -27,6 +29,8 @@
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            <td>{{ $user->channels }}</td>
+                            <td>{{ $user->subscribers }}</td>
                           </tr>
                         @endforeach
                     </tbody>

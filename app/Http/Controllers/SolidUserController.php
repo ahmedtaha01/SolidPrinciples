@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\User\storeRequest;
+use App\Http\Requests\User\UserStoreRequest;
+use App\Service\User\UserService;
 
-class UserController extends Controller
+class SolidUserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('user.index')->with('users',User::all());
+        //
     }
 
     /**
@@ -24,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('user.create');
+        //
     }
 
     /**
@@ -34,23 +37,20 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //here we will make a code which is not solid
-    // first we will discuss single responsibilty
-    public function store(Request $request)
+
+    //here is the solid version of storing user 
+    // following the single resposibility
+    public function store(UserStoreRequest $request, UserService $userService)
     {
         //validation
-        $user_data = $request->validate([
-            'name'      => ['required','min:5'],
-            'email'     => ['required','email'],
-            'password'  => ['required','min:10','regex:/^[^\d\n]*\d[^\d\n]*$/'],
-        ]);
+        //first we made a request class for validation the data
+        //if we want the data we call validated function
+        $user_data = $request->validated();
 
-        //some additional data
-        $user_data['channels'] = 5;
-        $user_data['subscribers'] = 8;
-
-        //creation of user
-        User::create($user_data);
+        //creation
+        //the logic for creating the user is now moved to a service class
+        $userService->store($user_data);
+        
 
         return redirect()->route('user.index');
     }
