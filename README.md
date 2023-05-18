@@ -1,5 +1,5 @@
 ## SOLID principles with examples
-<h3> Single Responsibility </h3> 
+<h3>1 - Single Responsibility </h3> 
 A class should do one thing and therefore it should have only a single reason to change.
 look at the storing user example
 
