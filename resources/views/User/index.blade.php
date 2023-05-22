@@ -21,6 +21,7 @@
                         <th scope="col">email</th>
                         <th scope="col">channels</th>
                         <th scope="col">subscribers</th>
+                        <th scope="col">notification</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -31,6 +32,10 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->channels }}</td>
                             <td>{{ $user->subscribers }}</td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ route('user.notify','email') }}">Email</a>
+                                <a class="btn btn-primary" href="{{ route('user.notify','sms') }}">SMS</a> 
+                            </td>
                           </tr>
                         @endforeach
                     </tbody>

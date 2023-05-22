@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+//here we will make code which is not solid
 class UserController extends Controller
 {
     /**
@@ -34,8 +35,10 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //here we will make a code which is not solid
-    // first we will discuss single responsibilty
+    
+    // first: single responsibilty principle
+    //this function doesn't follow the principle as it is responsible for:
+    // validation , some other data processing , creation of user
     public function store(Request $request)
     {
         //validation
@@ -98,5 +101,23 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // second: open for extension, closed for modification principle
+    // we violate this principle because if we want to add a new notification system
+    // we will modify this class or specifically this function which is not the
+    // rightway to do so.
+    public function notify($type){
+        if($type == 'email'){
+
+            //write code to send email
+        
+        }else if($type == 'sms'){
+
+            // write code to send sms 
+
+        }
+
+        return redirect()->route('user.index');
     }
 }

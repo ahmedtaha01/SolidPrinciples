@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\User\storeRequest;
 use App\Http\Requests\User\UserStoreRequest;
 use App\Service\User\UserService;
+use Exception;
 
+//here is the solid version
 class SolidUserController extends Controller
 {
     /**
@@ -38,13 +40,12 @@ class SolidUserController extends Controller
      */
 
 
-    //here is the solid version of storing user 
-    // following the single resposibility
+    // here is how to fix this problem (S) 
     public function store(UserStoreRequest $request, UserService $userService)
     {
         //validation
-        //first we made a request class for validation the data
-        //if we want the data we call validated function
+        //first we made a request class for validating the data
+        //if we want to return the validated data, we call validated function
         $user_data = $request->validated();
 
         //creation
@@ -98,5 +99,21 @@ class SolidUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // here is how to fix this problem (O)
+    // now you don't have to (modify) this function anymore
+    // every time you implement a new notification system you make a service class
+    // that (extends) the Notification interface 
+    public function notify($type){
+
+        try{
+            $serviceClass = 'App\Service\User\\'.$type.'Service';
+            (new $serviceClass)->notify();    
+        } catch(Exception $e){
+            abort(404,'we will support it soon');
+        }
+        
+        // return redirect()->route('user.index');
     }
 }

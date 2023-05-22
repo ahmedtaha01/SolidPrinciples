@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SolidUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,5 @@ use App\Http\Controllers\UserController;
 */
 
 Route::resource('/user',UserController::class);
+
+Route::get('/user/notify/{type}',[SolidUserController::class,'notify'])->name('user.notify');
