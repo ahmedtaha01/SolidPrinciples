@@ -12,7 +12,7 @@
 
 - [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
 - [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
-https://github.com/ahmedtaha01/SolidPrinciples/blob/02eaeea33c2295b75f926493369fe724506fd67a/app/Interfaces/NotificationInterface.php#L8
+https://github.com/ahmedtaha01/SolidPrinciples/blob/02eaeea33c2295b75f926493369fe724506fd67a/app/Interfaces/NotificationInterface.php#LL8C1-L15C1
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
