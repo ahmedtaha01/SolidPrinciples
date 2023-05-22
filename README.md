@@ -8,11 +8,11 @@
 
 <h3>1 - open for extension, closed for modification </h3> 
 <p>we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.</p>
-<p>look at the storing user example : </p>
+<p>look at the sending notification : </p>
 
 - [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
 - [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
-
+https://github.com/ahmedtaha01/SolidPrinciples/blob/02eaeea33c2295b75f926493369fe724506fd67a/app/Interfaces/NotificationInterface.php#L8
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
