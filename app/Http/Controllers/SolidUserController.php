@@ -116,4 +116,5 @@ class SolidUserController extends Controller
         
         // return redirect()->route('user.index');
     }
+    //check App\Service\User\email and sms Service
 }
