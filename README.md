@@ -13,8 +13,8 @@
 - [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
 - [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
 
-<p>the interface which the logic centered on:</p>
+<p>the interface which the logic centered on</p>
 
-(https://github.com/ahmedtaha01/SolidPrinciples/blob/712066735f17bd089824d5003836aff66b95d5f3/app/Interfaces/NotificationInterface.php#LL3C1-L15C1)
+https://github.com/ahmedtaha01/SolidPrinciples/blob/712066735f17bd089824d5003836aff66b95d5f3/app/Interfaces/NotificationInterface.php#LL3C1-L15C1
 
 
