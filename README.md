@@ -12,9 +12,15 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680
 <h3>2 - open for extension, closed for modification </h3> 
 <p>we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.</p>
 <p>look at the sending notification : </p>
+<p> before solid : </p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Http/Controllers/UserController.php#L109-L126
 
-- [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
-- [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
+<p> after solid : </p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Http/Controllers/SolidUserController.php#L106-L123
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Interfaces/NotificationInterface.php#L3-L14
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/service/user/emailService.php#L3-L16
 
 <h3>3 - Liskov substitution problem </h3> 
 <p>The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. Violating this principle can lead to unexpected behavior and code that is difficult to maintain</p>
