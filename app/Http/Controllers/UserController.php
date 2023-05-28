@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return User::all();
+        
         return view('user.index')->with('users',User::all());
     }
 
@@ -38,8 +38,10 @@ class UserController extends Controller
 
     
     // first: single responsibilty principle
-    //this function doesn't follow the principle as it is responsible for:
-    // validation , some other data processing , creation of user
+    // hello my name is store function, i am used for storing new users, but it seems that i am being 
+    // used in other functions like validation and other data processing, can you help me to be
+    // responsible only for one thing which is storing user ??
+
     public function store(Request $request)
     {
         //validation
@@ -105,9 +107,9 @@ class UserController extends Controller
     }
 
     // second: open for extension, closed for modification principle
-    // we violate this principle because if we want to add a new notification system
-    // we will modify this class or specifically this function which is not the
-    // rightway to do so.
+    // hello again sorry for interrupting, i am the notification function used for notifying the users
+    // but when a new notification system come in play, i am being modified every time and i don't
+    // like that , i want to be more dynamic, can you help me in that ?
     public function notify($type){
         if($type == 'email'){
 

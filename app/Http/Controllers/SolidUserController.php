@@ -41,6 +41,8 @@ class SolidUserController extends Controller
 
 
     // here is how to fix this problem (S) 
+    // thank you now i am responsible only for storing the user
+    // now i follow the single responsibilty principle
     public function store(UserStoreRequest $request, UserService $userService)
     {
         //validation
@@ -102,9 +104,10 @@ class SolidUserController extends Controller
     }
 
     // here is how to fix this problem (O)
-    // now you don't have to (modify) this function anymore
-    // every time you implement a new notification system you make a service class
-    // that (extends) the Notification interface 
+    // thank you, now i am not being modified any more, thanks to the NotificationInterface
+    // when a new notification system is introduced, you make a new file that implements that 
+    // interface, and iam not modified anymore, i am dynamic now and the notification type
+    // will be choosen in the runtime
     public function notify($type){
 
         try{

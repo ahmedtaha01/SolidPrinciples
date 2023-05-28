@@ -3,13 +3,18 @@
 namespace App\Interfaces;
 
 // the solution is in this interface
+
+// thank you very much, seems like i trusted the right person
+// now every user will inherit this interface and would calculate the bonus, now every user class is
+// treated as a Calculator and there is no problem in this as the calculate function is consistent
+// in all classes
+
 interface CalculateBonusInterface
 {
 
     public function calculate($salary);
 }
 
-// now every derived class object can be replaced with its parent object
-//This adheres to LSP as each user type is treated uniformly as a CalculateBnonus interface, and 
-// the behavior of calculate() is consistent across different implementations. 
-//Objects of different user types can be substituted without affecting the correctness of the program.
+ 
+// the key aspect here that any code that depends on user type(doctor-admin) object can work
+// seamlessly with any implementation of the CalculateInterface regardless of the user type
