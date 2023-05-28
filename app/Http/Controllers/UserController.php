@@ -39,7 +39,7 @@ class UserController extends Controller
     
     // first: single responsibilty principle
     // hello my name is store function, i am used for storing new users, but it seems that i am being 
-    // used in other functions like validation and other data processing, can you help me to be
+    // used in other responsibilities like validation and other data processing, can you help me to be
     // responsible only for one thing which is storing user ??
 
     public function store(Request $request)
