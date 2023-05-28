@@ -16,7 +16,7 @@
 <h3>3 - Liskov substitution problem </h3> 
 <p>The Liskov Substitution Principle (LSP) states that objects of a superclass should be replaceable with objects of its subclasses without affecting the correctness of the program. Violating this principle can lead to unexpected behavior and code that is difficult to maintain</p>
 <p>Liskov is an extension to the open closed principle, lets see our example</p>
-<p>first code that violates this rule : </p>
+<p>first,the code that violates this rule : </p>
 <p>lets figure out what is happening here, first we want to calculate the bonus of salary based on user rule</p>
 
 https://github.com/ahmedtaha01/SolidPrinciples/blob/181657c804ddc6ecdc730f56a482a7c55988c9eb/app/calculators/SuperadminBonusCalculator.php#L3-L11
@@ -25,3 +25,4 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/181657c804ddc6ecdc730f56a482
 <p/>
 <p>so the solution is using interface :</p>
 https://github.com/ahmedtaha01/SolidPrinciples/blob/6f2a6fff604d6205671eb3c12a0cb19a0fae4622/app/Interfaces/CalculateBonusInterface.php#L3-L10
+<p>now every user has its implementation of the calculate function, we can replace the base class object with the derived class object without any error</p>
