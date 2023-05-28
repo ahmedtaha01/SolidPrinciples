@@ -40,7 +40,7 @@ class User extends Authenticatable
     ];
 
     //// third: Liskov substitution principle
-    //// look at the app/calculators folder
+    //// look at the App/Calculators folder
     /*
     public function getBonusAttribute(){
         $class = '\App\Calculators\\'.$this->type.'BonusCalculator';
@@ -48,6 +48,8 @@ class User extends Authenticatable
     }
     */
     
+    // here is the solution to liskov
+    //look at App\SolidCalculators folder
     public function getBonusAttribute(){
         $class = '\App\SolidCalculators\\'.$this->type.'BonusCalculator';
         return (new $class)->calculate($this->salary);
