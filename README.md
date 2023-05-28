@@ -2,9 +2,12 @@
 <h3>1 - Single Responsibility </h3> 
 <p>A class should do one thing and therefore it should have only a single reason to change </p>
 <p>look at the storing user example : </p>
+<p>Before Solid :</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680480e662b910d/app/Http/Controllers/UserController.php#L40-L62
 
-- [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
-- [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
+<p>after applying solid :</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680480e662b910d/app/Http/Controllers/SolidUserController.php#L43-L59
+
 
 <h3>2 - open for extension, closed for modification </h3> 
 <p>we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.</p>
