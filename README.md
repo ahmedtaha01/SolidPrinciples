@@ -16,9 +16,9 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680
 https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Http/Controllers/UserController.php#L109-L126
 
 <p> after solid : </p>
-https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Http/Controllers/SolidUserController.php#L106-L123
+https://github.com/ahmedtaha01/SolidPrinciples/blob/3a1d727b963b805b7207ab0845030dc2cad3793d/app/Http/Controllers/SolidUserController.php#L106-L123
 
-https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/Interfaces/NotificationInterface.php#L3-L14
+https://github.com/ahmedtaha01/SolidPrinciples/blob/3a1d727b963b805b7207ab0845030dc2cad3793d/app/Interfaces/NotificationInterface.php#L3-L14
 
 https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c13c6fd36417f1/app/service/user/emailService.php#L3-L16
 
