@@ -28,7 +28,7 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/89b74a9bbdec351e889a2da9c1c1
 <p>first,the code that violates this rule : </p>
 <p>lets figure out what is happening here, first we want to calculate the bonus of salary based on user rule</p>
 
-https://github.com/ahmedtaha01/SolidPrinciples/blob/181657c804ddc6ecdc730f56a482a7c55988c9eb/app/calculators/SuperadminBonusCalculator.php#L3-L11
+https://github.com/ahmedtaha01/SolidPrinciples/blob/c50eb2dbc9b1568e0a65d7e937c118a43b93e6be/app/calculators/SuperadminBonusCalculator.php#L3-L20
 
 <p> the superadmin class is the base class for other users, other users inherit from it but thats violate the principle as the principle states that a derived class instance can replace its base class without change in behavior but in our code if we replace objects, the result will be different as super admin takes 20% bonus and admin takes 10%
 <p/>
