@@ -36,7 +36,9 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/c50eb2dbc9b1568e0a65d7e937c1
 
 https://github.com/ahmedtaha01/SolidPrinciples/blob/4e120eb7f5c889dccbaf75bd2483fd70227d8a5f/app/Interfaces/CalculateBonusInterface.php#L3-L20
 
-<p>now every user has its implementation of the calculate function, we can replace the base class object with the derived class object without any error</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/7a5f4d84b1f2c7cd5af9deba9c28246c77bbae1e/app/SolidCalculators/AdminBonusCalculator.php#L3-L11
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/7a5f4d84b1f2c7cd5af9deba9c28246c77bbae1e/app/SolidCalculators/DoctorBonusCalculator.php#L3-L13
 
 <h3>4- Interface segregation principle </h3> 
 <p>The Interface Segregation Principle suggests that clients should not be forced to depend on interfaces they do not use. In other words, it promotes the idea of creating smaller, focused interfaces that are tailored to the specific needs of clients, rather than having large, bloated interfaces that cater to multiple functionalities.</p>
