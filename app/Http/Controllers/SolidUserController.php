@@ -105,7 +105,7 @@ class SolidUserController extends Controller
 
     // here is how to fix this problem (O)
     // thank you, now i am not being modified any more, thanks to the NotificationInterface
-    // when a new notification system is introduced, you make a new file that implements that 
+    // when a new notification system is introduced, you make a new class that implements that 
     // interface, and iam not modified anymore, i am dynamic now and the notification type
     // will be choosen in the runtime
     public function notify($type){
