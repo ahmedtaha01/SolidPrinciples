@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('channels')->default('0');
             $table->string('subscribers')->default('0');
+            $table->string('type');
+            $table->string('salary');
             $table->rememberToken();
             $table->timestamps();
         });

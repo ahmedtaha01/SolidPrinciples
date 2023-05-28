@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name', 'email', 'password','channels','subscribers'
     ];
 
+    protected $appends = ['bonus'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -37,4 +38,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //// third: Liskov substitution principle
+    //// look at the app/calculators folder
+    /*
+    public function getBonusAttribute(){
+        $class = '\App\Calculators\\'.$this->type.'BonusCalculator';
+        return (new $class)->calculate($this->salary);
+    }
+    */
+    
+    public function getBonusAttribute(){
+        $class = '\App\SolidCalculators\\'.$this->type.'BonusCalculator';
+        return (new $class)->calculate($this->salary);
+    }
+    
 }
