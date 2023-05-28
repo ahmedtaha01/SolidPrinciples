@@ -33,7 +33,9 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/c50eb2dbc9b1568e0a65d7e937c1
 <p> the superadmin class is the base class for other users, other users inherit from it but thats violate the principle as the principle states that a derived class instance can replace its base class without change in behavior but in our code if we replace objects, the result will be different as super admin takes 20% bonus and admin takes 10%
 <p/>
 <p>so the solution is using interface :</p>
-https://github.com/ahmedtaha01/SolidPrinciples/blob/6f2a6fff604d6205671eb3c12a0cb19a0fae4622/app/Interfaces/CalculateBonusInterface.php#L3-L10
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/4e120eb7f5c889dccbaf75bd2483fd70227d8a5f/app/Interfaces/CalculateBonusInterface.php#L3-L20
+
 <p>now every user has its implementation of the calculate function, we can replace the base class object with the derived class object without any error</p>
 
 <h3>4- Interface segregation principle </h3> 
