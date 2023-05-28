@@ -19,3 +19,12 @@
 <p>first code that violates this rule</p>
 
 https://github.com/ahmedtaha01/SolidPrinciples/blob/2a8099e3c73153ee0199b35206e387db23d18f7e/app/calculators/SuperadminBonusCalculator.php#LL3C1-L11C2
+namespace App\Calculators;
+
+// example which is not solid (L)
+//this is the base class the other classes will inherit from
+class SuperadminBonusCalculator{
+    public function calculate($salary){
+        return $salary * 0.2;
+    }
+}
