@@ -2,9 +2,12 @@
 <h3>1 - Single Responsibility </h3> 
 <p>A class should do one thing and therefore it should have only a single reason to change </p>
 <p>look at the storing user example : </p>
+<p>Before Solid :</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680480e662b910d/app/Http/Controllers/UserController.php#L40-L62
 
-- [No Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/UserController.php).
-- [Applying Solid](https://github.com/ahmedtaha01/SolidPrinciples/blob/master/app/Http/Controllers/SolidUserController.php).
+<p>after applying solid :</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5386d8d94785527608de3c7f9680480e662b910d/app/Http/Controllers/SolidUserController.php#L43-L59
+
 
 <h3>2 - open for extension, closed for modification </h3> 
 <p>we stop ourselves from modifying existing code and causing potential new bugs in an otherwise happy application.</p>
@@ -26,3 +29,15 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/181657c804ddc6ecdc730f56a482
 <p>so the solution is using interface :</p>
 https://github.com/ahmedtaha01/SolidPrinciples/blob/6f2a6fff604d6205671eb3c12a0cb19a0fae4622/app/Interfaces/CalculateBonusInterface.php#L3-L10
 <p>now every user has its implementation of the calculate function, we can replace the base class object with the derived class object without any error</p>
+
+<h3>4- Interface segregation principle </h3> 
+<p>The Interface Segregation Principle suggests that clients should not be forced to depend on interfaces they do not use. In other words, it promotes the idea of creating smaller, focused interfaces that are tailored to the specific needs of clients, rather than having large, bloated interfaces that cater to multiple functionalities.</p>
+
+<p>this is the big interface the should be splitted into smaller ones</p>
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/ReportGeneratorInterface.php#L3-L20
+
+<p>after splitting :</p>
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/PdfReportGeneratorInterface.php#L3-L9
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/ExcelReportGeneratorInterFace.php#L3-L9
+https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/CsvReportGeneratorInterface.php#L3-L9
