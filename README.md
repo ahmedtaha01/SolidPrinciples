@@ -63,4 +63,5 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3
 
 https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/service/user/updateService.php#L7-L12
 
+<p>bind the implemetation of update function to the interface in AppServiceProvider</p>
 https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/Providers/AppServiceProvider.php#L17-L20
