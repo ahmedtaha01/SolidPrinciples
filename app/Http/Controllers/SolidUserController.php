@@ -8,15 +8,21 @@ use App\Http\Requests\User\storeRequest;
 use App\Http\Requests\User\UserStoreRequest;
 use App\Service\User\UserService;
 use Exception;
+use App\Interfaces\UserUpdateInterface;
 
 //here is the solid version
 class SolidUserController extends Controller
 {
+    private $updateUser;
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(UserUpdateInterface $updateUser)
+    {
+        $this->updateUser = $updateUser;
+    }
     public function index()
     {
         //
@@ -87,10 +93,17 @@ class SolidUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    // 5 - dependency inversion principle
+    // now as an update function, i will show you how this principle work without any challenges
+    // it would be a nice discussion between us
     public function update(Request $request, $id)
     {
-        //
+        $this->updateUser->update();
     }
+    // now as you can see we separated the high level code (SolidUserController) from the actual
+    // implementation (UpdateService) so the SolidUserController has become more flexible (can be used
+    // in other projects), testable , any change in low level code won't affect us now
 
     /**
      * Remove the specified resource from storage.

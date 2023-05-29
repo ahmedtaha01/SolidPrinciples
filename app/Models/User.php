@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Interfaces\CalculateBonusInterface;
 
 class User extends Authenticatable
 {
@@ -52,7 +53,12 @@ class User extends Authenticatable
     //look at App\SolidCalculators folder
     public function getBonusAttribute(){
         $class = '\App\SolidCalculators\\'.$this->type.'BonusCalculator';
-        return (new $class)->calculate($this->salary);
+        
+        return $this->calculateBonus(new $class);
     }
-    
+
+    // public function calculateBonus(CalculateBonusInterface $service){
+    //     return $service->calculate($this->salary);
+    // }
+    // return (new $class)->calculate($this->salary);
 }

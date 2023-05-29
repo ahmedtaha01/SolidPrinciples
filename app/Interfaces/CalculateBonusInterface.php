@@ -2,6 +2,7 @@
 
 namespace App\Interfaces;
 
+// 3 - liskov principle
 // the solution is in this interface
 
 // thank you very much, seems like i trusted the right person
