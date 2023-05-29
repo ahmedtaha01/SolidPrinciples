@@ -56,3 +56,11 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a
 
 * High-level modules or classes should not depend on low-level modules or classes. Both should depend on abstractions.
 * Abstractions should not depend on details. Details should depend on abstractions.
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/Http/Controllers/SolidUserController.php#L97-L106
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/Interfaces/UserUpdateInterface.php#L3-L8
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/service/user/updateService.php#L7-L12
+
+https://github.com/ahmedtaha01/SolidPrinciples/blob/2d628191633bcea50ea5d3c03fe3309daf7eefb9/app/Providers/AppServiceProvider.php#L17-L20
