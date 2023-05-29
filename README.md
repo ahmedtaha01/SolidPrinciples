@@ -51,3 +51,7 @@ https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a
 https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/PdfReportGeneratorInterface.php#L3-L9
 https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/ExcelReportGeneratorInterFace.php#L3-L9
 https://github.com/ahmedtaha01/SolidPrinciples/blob/5b34671486c085dd9c4b499f065a3131fbb45a1e/app/Interfaces/CsvReportGeneratorInterface.php#L3-L9
+
+<h3> 5 - Dependency inversion principle </h3>
+- High-level modules or classes should not depend on low-level modules or classes. Both should depend on abstractions.
+- Abstractions should not depend on details. Details should depend on abstractions.
